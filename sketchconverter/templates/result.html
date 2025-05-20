@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-box">
+            <h1>Image to Sketch Converter</h1>
+            <p class="subtitle">Your beautiful sketch is ready!</p>
+            
+            <div class="result-container">
+                <h2>Your Sketch Result</h2>
+                <div class="image-comparison">
+                    <div class="image-box">
+                        <h3>Original Image</h3>
+                        <img src="{{ original_image }}" alt="Original Image">
+                    </div>
+                    <div class="image-box">
+                        <h3>Sketch Version</h3>
+                        <img src="{{ sketch_image }}" alt="Sketch Image">
+                        <div class="download-btn-container">
+                            <a href="{{ sketch_image }}" download class="download-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download Sketch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <a href="/" class="convert-btn">Convert Another Image</a>
+                </div>
+            </div>
+            
+            <div class="footer">
+                Image to Sketch Converter
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

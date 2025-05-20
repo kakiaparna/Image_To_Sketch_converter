@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Sketch Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-box">
+            <h1>Image to Sketch Converter</h1>
+            <p class="subtitle">Transform your photos into beautiful sketches with just a click</p>
+            
+            <div class="drop-section">
+                <div class="drop-area" id="dropArea">
+                    <div class="cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                        </svg>
+                    </div>
+                    <h2>Drop your image here</h2>
+                    <p class="or-text">or choose file below (JPG, JPEG, PNG)</p>
+                </div>
+                
+                <div class="file-input-container">
+                    <label for="file" class="file-label">Choose File</label>
+                    <span id="file-name" class="file-name-display">No file selected</span>
+                </div>
+                
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <input type="file" id="file" name="file" accept=".jpg,.jpeg,.png" required>
+                    <div id="filePreview" class="file-preview"></div>
+                    
+                    <div class="sketch-options">
+                        <h2>Choose Sketch Style</h2>
+                        <select name="sketch_type" id="sketch_type" class="sketch-select">
+                            <option value="pencil">Pencil Sketch</option>
+                            <option value="detail">Detailed Edges</option>
+                            <option value="contour">Contour Drawing</option>
+                        </select>
+                    </div>
+                    
+                    <div class="loading-container" id="loadingContainer" style="display: none;">
+                        <div class="loading-spinner"></div>
+                        <p>Converting your image...</p>
+                    </div>
+                    
+                    <button type="submit" class="convert-btn"> CONVERT TO SKETCH</button>
+                </form>
+            </div>
+            
+            <div class="footer">
+                Image to Sketch Converter
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
