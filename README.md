@@ -9,7 +9,7 @@ The Image to Sketch Converter is a web application that transforms ordinary phot
 
 In the digital age, transforming photographs into sketches has become a popular way to create artistic interpretations of images. While professional graphics software can accomplish this task, they often require technical expertise and can be expensive. 💸
 
-This application bridges that gap by offering a simple, accessible solution for creating sketch art from photographs. 📷➡️✏️
+This application bridges that gap by offering a simple, accessible solution for creating sketch art from photographs. 
 
 🖍️ Sketch Styles Offered:
 
